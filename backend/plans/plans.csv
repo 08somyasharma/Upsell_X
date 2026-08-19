@@ -1,0 +1,5 @@
+plan_id,plan_name,category,trigger,price,benefit
+P001,International Plan,International,international,299,Reduced international calling rates
+P002,Night Calling Plan,Night,night,199,Discounted night calling rates
+P003,Voice Mail Plan,Voice Mail,voicemail,149,Enhanced voice mail service
+P004,Retention Offer,Retention,churn,0,One month free service
