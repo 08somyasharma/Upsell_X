@@ -1,7 +1,12 @@
-Flask
-flask-cors
+fastapi
+uvicorn
 pandas
-numpy
 scikit-learn==1.8.0
 joblib
-lightgbm
+pymongo
+pwdlib[argon2]
+PyJWT
+python-multipart
+python-dotenv
+pydantic
+email-validator
