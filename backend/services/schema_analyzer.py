@@ -28,113 +28,336 @@ REQUIRED_COLUMNS = [
 # COLUMN ALIASES
 # =========================================================
 
+# =========================================================
+# COLUMN ALIASES
+# =========================================================
+# Allows common variations and meaningful synonyms for
+# the model feature names.
+#
+# All aliases are converted back to the standard model
+# feature names before prediction.
+# =========================================================
+
 COLUMN_ALIASES = {
+
+    # -----------------------------------------------------
+    # ACCOUNT LENGTH
+    # -----------------------------------------------------
 
     "Account Length": [
         "Account Length",
         "account_length",
         "account length",
-        "accountLength"
+        "accountLength",
+        "account duration",
+        "account age",
+        "customer account length",
+        "customer account duration",
+        "tenure",
+        "customer tenure",
+        "subscription length",
+        "subscription duration"
     ],
+
+
+    # -----------------------------------------------------
+    # VOICEMAIL
+    # -----------------------------------------------------
 
     "VMail Message": [
         "VMail Message",
         "vmail_message",
+        "vmail messages",
         "voicemail",
+        "voice mail",
+        "voice_mail",
         "voice_mail_messages",
-        "voicemail_messages"
+        "voicemail_messages",
+        "voicemail messages",
+        "number of voicemail messages",
+        "voicemail count",
+        "voice mail count",
+        "vm count",
+        "vm messages"
     ],
+
+
+    # -----------------------------------------------------
+    # DAY MINUTES
+    # -----------------------------------------------------
 
     "Day Mins": [
         "Day Mins",
         "day_mins",
+        "day mins",
         "day minutes",
         "day_minutes",
-        "dayMinutes"
+        "dayMinutes",
+        "daily minutes",
+        "daily_mins",
+        "daytime minutes",
+        "daytime_mins",
+        "daytime calling minutes",
+        "day calling minutes",
+        "day call minutes",
+        "daily calling minutes",
+        "daily call minutes",
+        "day talk time",
+        "daily talk time",
+        "daytime talk time"
     ],
+
+
+    # -----------------------------------------------------
+    # DAY CALLS
+    # -----------------------------------------------------
 
     "Day Calls": [
         "Day Calls",
         "day_calls",
         "day calls",
-        "dayCalls"
+        "dayCalls",
+        "daily calls",
+        "daily_calls",
+        "daytime calls",
+        "daytime_calls",
+        "day calling count",
+        "day call count",
+        "daily call count",
+        "number of day calls",
+        "number of daytime calls",
+        "day call volume"
     ],
+
+
+    # -----------------------------------------------------
+    # DAY CHARGE
+    # -----------------------------------------------------
 
     "Day Charge": [
         "Day Charge",
         "day_charge",
         "day charge",
-        "dayCharge"
+        "dayCharge",
+        "daily charge",
+        "daily_charge",
+        "daytime charge",
+        "daytime_charge",
+        "day cost",
+        "daily cost",
+        "day calling cost",
+        "day call cost",
+        "day usage charge",
+        "day usage cost"
     ],
+
+
+    # -----------------------------------------------------
+    # EVENING MINUTES
+    # -----------------------------------------------------
 
     "Eve Mins": [
         "Eve Mins",
         "eve_mins",
+        "eve mins",
+        "evening mins",
         "evening_mins",
-        "evening_minutes"
+        "evening minutes",
+        "evening_minutes",
+        "evening calling minutes",
+        "evening call minutes",
+        "evening call duration",
+        "evening talk time",
+        "evening usage minutes",
+        "nighttime evening minutes"
     ],
+
+
+    # -----------------------------------------------------
+    # EVENING CALLS
+    # -----------------------------------------------------
 
     "Eve Calls": [
         "Eve Calls",
         "eve_calls",
-        "evening_calls"
+        "eve calls",
+        "evening calls",
+        "evening_calls",
+        "evening call count",
+        "evening calling count",
+        "number of evening calls",
+        "number of evening calls made",
+        "evening call volume"
     ],
+
+
+    # -----------------------------------------------------
+    # EVENING CHARGE
+    # -----------------------------------------------------
 
     "Eve Charge": [
         "Eve Charge",
         "eve_charge",
-        "evening_charge"
+        "eve charge",
+        "evening charge",
+        "evening_charge",
+        "evening cost",
+        "evening calling cost",
+        "evening call cost",
+        "evening usage charge",
+        "evening usage cost"
     ],
+
+
+    # -----------------------------------------------------
+    # NIGHT MINUTES
+    # -----------------------------------------------------
 
     "Night Mins": [
         "Night Mins",
         "night_mins",
+        "night mins",
         "night minutes",
-        "night_minutes"
+        "night_minutes",
+        "nighttime minutes",
+        "nighttime_mins",
+        "night calling minutes",
+        "night call minutes",
+        "night talk time",
+        "nighttime talk time",
+        "night usage minutes",
+        "overnight minutes"
     ],
+
+
+    # -----------------------------------------------------
+    # NIGHT CALLS
+    # -----------------------------------------------------
 
     "Night Calls": [
         "Night Calls",
         "night_calls",
-        "night calls"
+        "night calls",
+        "nightCalls",
+        "nighttime calls",
+        "nighttime_calls",
+        "night call count",
+        "nighttime call count",
+        "number of night calls",
+        "number of nighttime calls",
+        "night call volume"
     ],
+
+
+    # -----------------------------------------------------
+    # NIGHT CHARGE
+    # -----------------------------------------------------
 
     "Night Charge": [
         "Night Charge",
         "night_charge",
-        "night charge"
+        "night charge",
+        "nightCharge",
+        "nighttime charge",
+        "nighttime_charge",
+        "night cost",
+        "nighttime cost",
+        "night calling cost",
+        "night call cost",
+        "night usage charge",
+        "night usage cost"
     ],
+
+
+    # -----------------------------------------------------
+    # INTERNATIONAL MINUTES
+    # -----------------------------------------------------
 
     "Intl Mins": [
         "Intl Mins",
         "intl_mins",
+        "intl mins",
         "international_mins",
+        "international mins",
         "international_minutes",
-        "international minutes"
+        "international minutes",
+        "international calling minutes",
+        "international call minutes",
+        "international call duration",
+        "international talk time",
+        "international usage minutes",
+        "international usage",
+        "overseas calling minutes",
+        "international voice minutes"
     ],
+
+
+    # -----------------------------------------------------
+    # INTERNATIONAL CALLS
+    # -----------------------------------------------------
 
     "Intl Calls": [
         "Intl Calls",
         "intl_calls",
+        "intl calls",
         "international_calls",
-        "international calls"
+        "international calls",
+        "internationalCalls",
+        "international call count",
+        "international calling count",
+        "number of international calls",
+        "number of international calls made",
+        "international call volume",
+        "overseas calls",
+        "overseas call count"
     ],
+
+
+    # -----------------------------------------------------
+    # INTERNATIONAL CHARGE
+    # -----------------------------------------------------
 
     "Intl Charge": [
         "Intl Charge",
         "intl_charge",
+        "intl charge",
         "international_charge",
-        "international charge"
+        "international charge",
+        "internationalCharge",
+        "international cost",
+        "international calling cost",
+        "international call cost",
+        "international usage charge",
+        "international usage cost",
+        "international fees",
+        "overseas calling cost"
     ],
+
+
+    # -----------------------------------------------------
+    # CUSTOMER SERVICE CALLS
+    # -----------------------------------------------------
 
     "CustServ Calls": [
         "CustServ Calls",
         "custserv_calls",
+        "custserv calls",
         "customer_service_calls",
-        "customer service calls"
+        "customer service calls",
+        "customerServiceCalls",
+        "customer service call count",
+        "customer support calls",
+        "customer support call count",
+        "support calls",
+        "support call count",
+        "service calls",
+        "service call count",
+        "help desk calls",
+        "helpdesk calls",
+        "number of customer service calls",
+        "number of support calls"
     ]
 }
-
 
 # =========================================================
 # VALUE RANGES
