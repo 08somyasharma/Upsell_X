@@ -26,6 +26,9 @@ from services.recommendation_engine import (
     recommend
 )
 
+from schemas import MessageRequest
+from services.message_generator import generate_message
+
 
 # =========================================================
 # ROUTER
@@ -534,4 +537,34 @@ async def predict(
             "no_recommendation_count":
                 no_recommendation_count
         }
+        
+    }
+
+@router.post("/generate-message")
+def generate_outreach_message(
+    data: MessageRequest,
+    _: dict = Depends(get_current_admin)
+):
+
+    try:
+
+        message = generate_message(
+            customer_id=data.customer_id,
+            recommendation_type=data.recommendation_type,
+            plan_name=data.plan_name,
+            plan_benefit=data.plan_benefit,
+            reason=data.reason,
+            churn_probability=data.churn_probability
+        )
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=f"Message generation failed: {str(e)}"
+        )
+
+    return {
+        "customer_id": data.customer_id,
+        "message": message
     }

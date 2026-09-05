@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Response
+from fastapi import APIRouter, HTTPException, Response, Depends
 
 from database import admins_collection
 from schemas import SignupRequest, LoginRequest
@@ -8,6 +8,8 @@ from auth.utils import (
     verify_password,
     create_access_token
 )
+
+from auth.dependencies import get_current_admin
 
 
 router = APIRouter(
@@ -93,4 +95,14 @@ def login(
 
     return {
         "message": "Login successful"
+    }
+
+
+# tells the frontend who is currently logged in
+
+@router.get("/me")
+def get_me(admin: dict = Depends(get_current_admin)):
+    return {
+        "name": admin["name"],
+        "email": admin["email"]
     }

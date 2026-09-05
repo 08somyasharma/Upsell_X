@@ -362,14 +362,6 @@ COLUMN_ALIASES = {
 # =========================================================
 # VALUE RANGES
 # =========================================================
-#
-# These are broad sanity limits.
-# The lower limit is 0 because these values cannot
-# logically be negative.
-#
-# These are NOT the exact min/max values from the
-# training dataset.
-# =========================================================
 
 VALUE_RANGES = {
 
@@ -663,8 +655,7 @@ def analyze_schema(
             "valid": False,
             "dataframe": None,
             "error":
-                "Some columns contain values "
-                "outside the allowed range.",
+                "Provided file contains neg values",
             "missing_columns":
                 missing_columns,
             "missing_count":
